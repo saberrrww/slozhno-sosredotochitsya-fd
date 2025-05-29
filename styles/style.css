@@ -1,11 +1,11 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-color: var(--background-color);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--background-image);
-  background-color: var(--background-color);
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -13,12 +13,16 @@
 .header {
   position: relative;
   display: grid;
-  inline-size: 100%;
-  block-size: 100vh;
-  min-block-size: 668px;
   grid-template-rows: 1fr min-content 1fr;
   padding-inline-start: 10px;
   padding-inline-end: 10px;
+  inline-size: 100%;
+  block-size: 100vh;
+  min-block-size: 668px;
+}
+
+.page > *:not(.footer) {
+  margin-bottom: 40px;
 }
 
 .decorated-zone::before {
@@ -26,10 +30,10 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    inline-size: 25px;
-    block-size: 25px;
     border-top: 1px solid var(--accent-color);
     border-right: 1px solid var(--accent-color);
+    inline-size: 25px;
+    block-size: 25px;
 }
 
 .decorated-zone::after {
@@ -37,21 +41,21 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
+    border-bottom: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent-color);
     inline-size: 25px;
     block-size: 25px;
-    border-left: 1px solid var(--accent-color);
-    border-bottom: 1px solid var(--accent-color);
 }
 
 .rec {
     position: absolute;
-    right: 38px;
     top: 11px;
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    font-weight: var(--font-weight-text);
-    text-transform: uppercase;
+    right: 38px;
     color: var(--accent-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-text);
+    font-size: var(--font-size);
+    text-transform: uppercase;
 }
 
 .rec::after {
@@ -59,14 +63,13 @@
     position: absolute;
     top: 8px;
     right: -19px;
-    inline-size: 9px;
-    block-size: 9px;
-    background-color: var(--accent-color);
     border-radius: 50%;
     box-shadow: 0px 0px 4px 3px var(--accent-color);
+    background-color: var(--accent-color);
+    inline-size: 9px;
+    block-size: 9px;
 }
 
-/* менюшка */
 .header__theme-menu {
   justify-self: end;
   align-self: center;
@@ -79,23 +82,24 @@
 }
 
 .header__theme-menu-item {
-  font-family: var(--font-family);
-  font-size: var(--font-size);
-  font-weight: var(--font-weight-text);
   color: var(--accent-color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-text);
+  font-size: var(--font-size);
   line-height: 18px;
 }
 
 .header__theme-menu-button {
-  background-color: transparent;
+  border: none;
   text-transform: lowercase;
+  background-color: transparent;
   block-size: 26px;
   inline-size: 70px;
-  border: none;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
@@ -103,23 +107,24 @@
 }
 
 .header__theme-menu-button:focus {
+  border: none;
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--accent-color);
 }
 
 .header__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: 83%;
-}
-
-.title-decor {
   color: var(--color-title);
-  text-shadow: 5px 5px var(--accent-color);
   font-family: var(--font-family), sans-serif;
   font-weight: var(--font-weight-title);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  text-shadow: 4px 4px var(--accent-color);
 }
 
-.header__text-content {
-  background-color: var(--accent-color);
+.header__text-content{
   justify-self: center;
   align-self: center;
 }
@@ -127,7 +132,86 @@
 .header__text {
   color: var(--background-color);
   font-family: var(--font-family);
-  font-size: var(--font-size);
   font-weight: var(--font-weight-title);
-  line-height: 23.4px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content:last-child {
+  gap: 10px;
+}
+
+.content__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content__title {
+  color: var(--accent-color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-title);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+.content__subtitle {
+  font-weight: var(--font-weight-title);
+}
+
+.content__card-subtitle {
+  font-weight: var(--font-weight-text);
+}
+
+.content__card-text {
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-text);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  inline-size: 100%;
+  block-size: 100vh;
+  min-block-size: 668px;
+}
+
+.footer__title {
+  color: var(--color-title);
+  font-family: var(--font-family), sans-serif;
+  font-weight: var(--font-weight-title);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+.title-decor {
+  color: var(--background-color);
+  font-family: var(--font-family), sans-serif;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background-color: var(--accent-color);
+}
+
+.content__image {
+  background-size: cover;
 }
