@@ -124,7 +124,7 @@
   text-shadow: 4px 4px var(--accent-color);
 }
 
-.header__text-content{
+.header__text-content {
   justify-self: center;
   align-self: center;
 }
@@ -148,6 +148,11 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.content__card-link {
+  text-shadow: 1.5px 1.5px var(--accent-color);
+  text-decoration: none;
 }
 
 .content:last-child {
