@@ -16,7 +16,7 @@
   --subtitle-color: var(--accent-color);
   --shadow-subtitle-color: var(--background-color);
   --text-color: #F1B2CE;
-  --border-color: var(--accent-color);
+  --border-color: #FF0070;
   --accent-color-hover: rgba(255, 0, 112, 0.4);
 }
 

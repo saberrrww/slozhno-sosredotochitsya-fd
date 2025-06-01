@@ -16,9 +16,9 @@
   --subtitle-color: var(--accent-color);
   --shadow-subtitle-color: var(--background-color);
   --text-color: #353430;
-  --border-color: var(--accent-color);
+  --border-color: #353430;
   --accent-color-hover: rgba(50, 49, 45, 0.4);
-  
+
     .rec {
     display: none;
   }
@@ -37,7 +37,7 @@
   --subtitle-color: var(--accent-color);
   --shadow-subtitle-color: var(--background-color);
   --text-color: #353430;
-  --border-color: var(--accent-color);
+  --border-color: #353430;
   --accent-color-hover: rgba(50, 49, 45, 0.4);
   }
 }
