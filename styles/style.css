@@ -373,17 +373,17 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
   }
-  
+
   .section__distractions .content__title {
     grid-row: span 1;
   }
 
-  .section__distractions .content__card{
+  .section__distractions .content__card {
     grid-row: 2 / 3 ;
     grid-column: span 1;
   }
 
-  .content > .title-decor{
+  .content > .title-decor {
     grid-column: 2 / 4;
   }
 
