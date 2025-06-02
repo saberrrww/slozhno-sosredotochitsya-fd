@@ -1,8 +1,5 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   background-color: var(--background-color);
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center;
@@ -18,6 +15,7 @@
   padding-inline-start: 10px;
   padding-inline-end: 10px;
   block-size: 100vh;
+  min-block-size: min-content;
 }
 
 .decorated-zone::before {
@@ -73,7 +71,7 @@
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 11.5px;
+  gap: 10px;
 }
 
 .header__theme-menu-item {
@@ -85,11 +83,13 @@
 }
 
 .header__theme-menu-button {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
   border: none;
   text-transform: lowercase;
   background-color: transparent;
-  block-size: 26px;
-  inline-size: 70px;
+  padding: 2px 13px 4px;
 }
 
 .header__theme-menu-button_active {
@@ -102,7 +102,6 @@
 }
 
 .header__theme-menu-button:focus {
-  border: none;
   outline: none;
 }
 
@@ -122,6 +121,7 @@
 .header__text-content {
   justify-self: center;
   align-self: center;
+  display: inline-block;
 }
 
 .header__text {
@@ -285,7 +285,7 @@
     grid-column: 2 / 3;
   }
 
-  .content:nth-child(2) .content__card {
+  .section__distractions .content__card {
     grid-column: 1 / 4;
   }
 
@@ -337,5 +337,61 @@
 
   .footer {
     padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+    padding-block-start: 20px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .header__text-content {
+    margin-block-end: 20px;
+    inline-size: 491px;
+    block-size: 71px;
+  }
+
+  .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .content__card {
+    grid-column: 2 / 4;
+  }
+
+  .section__distractions {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  
+  .section__distractions .content__title {
+    grid-row: span 1;
+  }
+
+  .section__distractions .content__card{
+    grid-row: 2 / 3 ;
+    grid-column: span 1;
+  }
+
+  .content > .title-decor{
+    grid-column: 2 / 4;
+  }
+
+  .section__visual-guide .content__title {
+    grid-column: 1 / 4;
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
