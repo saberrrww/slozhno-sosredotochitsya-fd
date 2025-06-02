@@ -9,6 +9,7 @@
   --accent-color: #FF0070;
   --subtitle-color: var(--accent-color);
   --shadow-subtitle-color: var(--background-color);
+  --title-text-color: #000028;
   --text-color: #F1B2CE;
   --border-color: var(--accent-color);
   --font-size: 18px;
