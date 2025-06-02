@@ -33,10 +33,11 @@
   :root {
   --background-image: url(../images/cover-image-light.png);
   --color-title: #FFC2E6;
-  --background-color: #353430;
+  --background-color: #FFF1F7;
   --accent-color: #FF8DCB;
   --subtitle-color: var(--accent-color);
   --shadow-subtitle-color: var(--background-color);
+  --title-text-color: #353430;
   --text-color: #353430;
   --border-color: #353430;
   --accent-color-hover: rgba(50, 49, 45, 0.4);

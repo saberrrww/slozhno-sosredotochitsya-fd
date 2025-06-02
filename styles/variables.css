@@ -11,11 +11,11 @@
   --shadow-subtitle-color: var(--background-color);
   --title-text-color: #000028;
   --text-color: #F1B2CE;
-  --border-color: var(--accent-color);
+  --border-color: #FF0070;
+  --accent-color-hover: rgba(255, 0, 112, 0.4);
   --font-size: 18px;
   --font-weight-text: 400;
   --font-weight-title: 700;
   --line-height: 23.4px;
   --font-family: 'IBM Plex Mono';
-  --accent-color-hover: rgba(255, 0, 112, 0.4);
 }
