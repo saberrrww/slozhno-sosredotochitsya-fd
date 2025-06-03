@@ -19,3 +19,9 @@
   --line-height: 23.4px;
   --font-family: 'IBM Plex Mono';
 }
+
+:root.theme-auto {
+  .rec {
+    display: none;
+  }
+}

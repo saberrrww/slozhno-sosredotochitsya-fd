@@ -16,6 +16,7 @@
   padding-inline-end: 10px;
   block-size: 100vh;
   min-block-size: min-content;
+  min-block-size: 668px;
 }
 
 .decorated-zone::before {
@@ -106,7 +107,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header__title {
@@ -231,6 +232,7 @@
   .header {
     padding-inline-start: 20px;
     padding-inline-end: 20px;
+    min-block-size: 1024px;
   }
 
   .header__title {
@@ -341,6 +343,10 @@
 }
 
 @media (min-width: 1024px) {
+  .header {
+    min-block-size: 768px;
+  }
+
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -371,15 +377,15 @@
 
   .section__distractions {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: row;
   }
 
   .section__distractions .content__title {
-    grid-row: span 1;
+    grid-column: 1 / 4;
+    max-inline-size: 315px;
   }
 
   .section__distractions .content__card {
-    grid-row: 2 / 3 ;
     grid-column: span 1;
   }
 

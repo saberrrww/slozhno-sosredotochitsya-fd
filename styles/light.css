@@ -41,5 +41,9 @@
   --text-color: #353430;
   --border-color: #353430;
   --accent-color-hover: rgba(50, 49, 45, 0.4);
+  
+      .rec {
+    display: none;
+  }
   }
 }
